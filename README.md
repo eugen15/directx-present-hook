@@ -7,7 +7,7 @@ The project is an answer to this Stack Overflow question https://stackoverflow.c
 See the following classes:
 * ``D3D11PresentHook``: d3d11-present-hook.h, d3d11-present-hook.cpp.
 * ``D3D12PresentHook``: d3d12-present-hook.h, d3d12-present-hook.cpp.
-* 
+
 The classes above are well commented. So, I hope that even if they do not solve your task directly, they may give you some ideas at least. The other classes are auxiliary or used to test the hooks by creating a "black box" window with a moving square.
 
 ## Building
