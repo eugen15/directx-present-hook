@@ -1,12 +1,13 @@
 # DirectX Present Hook
 
-The project is an answer to this Stack Overflow question https://stackoverflow.com/questions/40538590/getting-dxgi-swapchain-by-hwnd. It shows how how to hook IDXGISwapChain::Present (when it is used with DirectX 11/DirectX 12) to capture frames of a window which you do not control. For example, it can be used for some ActiveX controls which you integrate to your application. Probably, the project can be extended for more complicated tasks.
+The project is an answer to this Stack Overflow question https://stackoverflow.com/questions/40538590/getting-dxgi-swapchain-by-hwnd. It shows how to hook IDXGISwapChain::Present (when it is used with DirectX 11/DirectX 12) to capture frames of a window which you do not control. For example, it can be used for some ActiveX controls which you integrate to your application. Probably, the project can be extended for more complicated tasks.
 
 ## Source code
 
 See the following classes:
 * ``D3D11PresentHook``: d3d11-present-hook.h, d3d11-present-hook.cpp.
 * ``D3D12PresentHook``: d3d12-present-hook.h, d3d12-present-hook.cpp.
+
 The classes above are well commented. So, I hope that even if they do not solve your task directly, they may give you some ideas at least. The other classes are auxiliary or used to test the hooks by creating a "black box" window with a moving square.
 
 ## Building
