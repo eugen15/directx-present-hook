@@ -6,19 +6,19 @@
 namespace MiscHelpers {
 
 std::vector<std::uint8_t> GenerateSquareRGBAPicture(std::uint32_t width) {
-  const UINT rowPitch = width * 4;
-  const UINT cellPitch = rowPitch >> 3;        // The width of a cell in the checkboard texture.
-  const UINT cellHeight = width >> 3;          // The height of a cell in the checkerboard texture.
-  const UINT textureSize = rowPitch * width;
+  const std::uint32_t rowPitch = width * 4;
+  const std::uint32_t cellPitch = rowPitch >> 3; // The width of a cell in the checkboard texture.
+  const std::uint32_t cellHeight = width >> 3;   // The height of a cell in the checkerboard texture.
+  const std::uint32_t textureSize = rowPitch * width;
 
-  std::vector<UINT8> data(textureSize);
-  UINT8* p = &data[0];
+  std::vector<std::uint8_t> data(textureSize);
+  std::uint8_t* p = &data.front();
 
-  for (UINT n = 0; n < textureSize; n += 4) {
-    UINT x = n % rowPitch;
-    UINT y = n / rowPitch;
-    UINT i = x / cellPitch;
-    UINT j = y / cellHeight;
+  for (std::uint32_t n = 0; n < textureSize; n += 4) {
+    std::uint32_t x = n % rowPitch;
+    std::uint32_t y = n / rowPitch;
+    std::uint32_t i = x / cellPitch;
+    std::uint32_t j = y / cellHeight;
 
     if (i % 2 == j % 2) {
       p[n] = 0x00;      // R

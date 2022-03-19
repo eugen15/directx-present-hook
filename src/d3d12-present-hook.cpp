@@ -72,7 +72,7 @@ HRESULT D3D12PresentHook::Hook() {
   while (true) {
     if (reinterpret_cast<std::uintptr_t>(d3d12Helper.GetCommandQueue()) ==
       *static_cast<const std::uintptr_t*>(static_cast<const void*>(start + i))) {
-      commandChainOffset_ = i;
+      commandQueueOffset_ = i;
       break;
     }
     ++i;
@@ -262,7 +262,7 @@ void D3D12PresentHook::CaptureFrame(IDXGISwapChain* swapChain) {
   ID3D12CommandQueue* commandQueue =
     reinterpret_cast<ID3D12CommandQueue*>(
       *static_cast<const std::uintptr_t*>(
-        static_cast<const void*>(start + commandChainOffset_)));
+        static_cast<const void*>(start + commandQueueOffset_)));
 
   // ... then execute the command list to copy the swap chain texture to the read back texture.
   ID3D12CommandList* commandLists[] = {copyCommandList.Get()};

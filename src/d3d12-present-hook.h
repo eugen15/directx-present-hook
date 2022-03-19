@@ -42,7 +42,7 @@ private:
     UINT syncInterval, UINT flags);
 
   // The command chain offset from the swap chain object pointer.
-  std::uintptr_t commandChainOffset_ = 0;
+  std::uintptr_t commandQueueOffset_ = 0;
 
   // Hook pointers.
   std::uint64_t presentPointer_ = 0;
