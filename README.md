@@ -28,7 +28,7 @@ The root folder contains ``example-prepare-x32.cmd`` and ``example-prepare-x64.c
 * Depending on PolyHook 2 compilation parameters, you may have to change the ``target_link_libraries`` line in ``CMakeLists.txt``.
 * Run one of the scripts to prepare the Visual Studio solution.
 * Go to the ``build`` folder, open the solution. compile it.
-*  You might need ``asmjit.dll``, ``capstone.dll``, ``PolyHook_2.dll`` and ``Zydis.dll`` in the output folder. If you compiled PolyHook 2 via vcpkg, they will be there automatically.
+* You might need ``asmjit.dll``, ``capstone.dll``, ``PolyHook_2.dll`` and ``Zydis.dll`` in the output folder. If you compiled PolyHook 2 via vcpkg, they will be there automatically.
 
 ## Testing
 * ``directx-present-hook.exe`` will create a DirectX 11 window with a moving square, set the hook and save first ten frames into BMP files in the same output folder.
