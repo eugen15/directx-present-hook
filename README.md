@@ -18,7 +18,7 @@ Visual Studio 2019 v16.10 & v16.11 or later is required. Personally, I use Visua
 #### CMake
 CMake is available as a part of Visual Studio 2022 installation. In my case it is located in the following folder: ``C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/``. Install CMake separately https://cmake.org/ if your Visual Studio does not include it. 
 
-#### PolyHook_2_0
+#### PolyHook 2
 You need to compile this https://github.com/stevemk14ebr/PolyHook_2_0
 
 #### DirectX Present Hook
