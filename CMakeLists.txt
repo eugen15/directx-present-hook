@@ -91,4 +91,4 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 add_executable(${CMAKE_PROJECT_NAME} WIN32 ${SOURCES} ${HEADERS})
 
-target_link_libraries(${CMAKE_PROJECT_NAME} D3D11 D3D12 Dxgi dxguid PolyHook_2 capstone_dll)
+target_link_libraries(${CMAKE_PROJECT_NAME} D3D11 D3D12 Dxgi dxguid PolyHook_2)

@@ -4,7 +4,7 @@
 #include <format>
 #include <iostream>
 
-#include <polyhook2\CapstoneDisassembler.hpp>
+#include <polyhook2\ZydisDisassembler.hpp>
 #include <polyhook2\Detour\x86Detour.hpp>
 #include <polyhook2\Detour\x64Detour.hpp>
 
@@ -104,11 +104,9 @@ HRESULT D3D12PresentHook::Hook() {
 
   // Configure everything to hook.
 #if defined(_M_X64)
-  PLH::CapstoneDisassembler dis(PLH::Mode::x64);
   PLH::x64Detour* detour = new PLH::x64Detour(presentPointer_,
-    presentCallback, &presentTrampoline_, dis);
+    presentCallback, &presentTrampoline_);
 #else
-  PLH::CapstoneDisassembler dis(PLH::Mode::x86);
   PLH::x86Detour* detour = new PLH::x86Detour(presentPointer_,
     presentCallback, &presentTrampoline_, dis);
 #endif
